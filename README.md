@@ -1,2 +1,20 @@
-# nidzp-sales-pro
-Superior sales landing for NIDZP AI Marketing - local business websites with Nina AI. Transparent pricing, instant demos.
+# NIDZP Sales Pro
+
+Superior sales landing page za NIDZP AI Marketing.
+
+## Pokretanje lokalno
+
+```bash
+npm install
+cp .env.example .env
+# Unesi VITE_GROQ_API_KEY u .env
+npm run dev
+```
+
+Otvori http://localhost:5173
+
+## Features
+- Instant demo selector za delatnosti
+- Transparentne cene (600€ / 2500€)
+- Nina AI chat (Groq)
+- Čist, modern dizajn
