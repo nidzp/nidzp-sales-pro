@@ -3,66 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NIDZP · Sajt za vaš lokal | Premium AI</title>
+<title>NIDZP · Sajt kakav ne postoji</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root { --bg:#050505; --card:#111; --text:#fafafa; --muted:#a1a1aa; --accent:#f97316; --border:#222; }
 * { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; }
-body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; overflow-x:hidden; }
+body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
 .container { max-width:1140px; margin:0 auto; padding:0 24px; }
-header { position:sticky; top:0; z-index:100; background:rgba(5,5,5,.8); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+header { position:sticky; top:0; z-index:100; background:rgba(5,5,5,.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
 .header-inner { display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
 .logo { font-weight:800; font-size:1.3rem; letter-spacing:-.03em; }
 .logo span { color:var(--accent); }
-nav a { color:var(--muted); text-decoration:none; margin-left:32px; font-weight:500; transition:.2s; }
+nav a { color:var(--muted); text-decoration:none; margin-left:28px; font-weight:500; }
 nav a:hover { color:#fff; }
 
-.reveal { opacity:0; transform:translateY(40px); animation:reveal .8s ease forwards; }
-.reveal-delay-1 { animation-delay:.1s; }
-.reveal-delay-2 { animation-delay:.2s; }
-.reveal-delay-3 { animation-delay:.3s; }
-@keyframes reveal { to { opacity:1; transform:none; } }
+.hero { padding:100px 0 70px; text-align:center; background:radial-gradient(ellipse 80% 50% at 50% -10%, #1c1917, transparent); }
+.eyebrow { color:var(--accent); font-weight:600; letter-spacing:2px; font-size:.75rem; text-transform:uppercase; margin-bottom:16px; }
+h1 { font-size:clamp(2.4rem,6.5vw,4.4rem); font-weight:800; letter-spacing:-.04em; line-height:1.05; margin-bottom:20px; }
+.lead { font-size:1.2rem; color:var(--muted); max-width:680px; margin:0 auto 40px; }
 
-.hero { padding:120px 0 90px; text-align:center; background:radial-gradient(ellipse 80% 50% at 50% -10%, #1c1917, transparent); }
-.eyebrow { color:var(--accent); font-weight:600; letter-spacing:3px; font-size:.75rem; text-transform:uppercase; margin-bottom:20px; }
-h1 { font-size:clamp(2.6rem,7vw,4.8rem); font-weight:800; letter-spacing:-.04em; line-height:1.02; margin-bottom:24px; }
-.lead { font-size:1.3rem; color:var(--muted); max-width:700px; margin:0 auto 48px; }
-
-.price-row { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin:40px 0; }
-.price-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px 36px; min-width:240px; transition:.3s; }
-.price-card:hover { transform:translateY(-6px); border-color:var(--accent); }
-.price-card.premium { border-color:var(--accent); box-shadow:0 20px 60px rgba(249,115,22,.12); }
-.price { font-size:2.6rem; font-weight:800; color:var(--accent); }
+.price-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin:40px 0; }
+.price-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px; text-align:left; position:relative; transition:.3s; }
+.price-card:hover { transform:translateY(-4px); }
+.price-card.premium { border-color:var(--accent); box-shadow:0 20px 50px rgba(249,115,22,.1); }
+.badge { position:absolute; top:-12px; right:20px; background:var(--accent); color:#fff; font-size:.7rem; font-weight:700; padding:4px 12px; border-radius:20px; letter-spacing:1px; }
+.price { font-size:2.8rem; font-weight:800; color:var(--accent); }
 .price small { font-size:1rem; color:var(--muted); font-weight:500; }
+.price-card h3 { font-size:1.3rem; margin:8px 0 12px; }
+.price-card p { color:var(--muted); margin-bottom:20px; font-size:.95rem; }
+.price-card ul { list-style:none; }
+.price-card li { padding:6px 0 6px 24px; position:relative; font-size:.95rem; }
+.price-card li:before { content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700; }
 
-.btn { display:inline-block; background:var(--accent); color:#fff; padding:18px 36px; border-radius:14px; text-decoration:none; font-weight:600; margin:8px; transition:.25s; border:none; cursor:pointer; font-size:1.05rem; }
-.btn:hover { background:#ea580c; transform:translateY(-2px); box-shadow:0 10px 30px rgba(249,115,22,.3); }
+.btn { display:inline-block; background:var(--accent); color:#fff; padding:16px 32px; border-radius:12px; text-decoration:none; font-weight:600; transition:.2s; border:none; cursor:pointer; font-size:1rem; }
+.btn:hover { background:#ea580c; transform:translateY(-1px); }
 .btn-outline { background:transparent; border:1px solid var(--border); color:#fff; }
 .btn-outline:hover { border-color:#fff; }
 
-section { padding:100px 0; }
-h2 { font-size:2.4rem; font-weight:700; text-align:center; margin-bottom:16px; letter-spacing:-.02em; }
-.sub { text-align:center; color:var(--muted); margin-bottom:50px; font-size:1.1rem; }
+section { padding:80px 0; }
+h2 { font-size:2.2rem; font-weight:700; text-align:center; margin-bottom:12px; letter-spacing:-.02em; }
+.sub { text-align:center; color:var(--muted); margin-bottom:40px; }
 
-.builder { max-width:800px; margin:0 auto; background:var(--card); border:1px solid var(--border); border-radius:24px; padding:40px; }
-.builder select, .builder input { width:100%; padding:18px; background:#0a0a0a; color:#fff; border:1px solid var(--border); border-radius:14px; font-size:1.05rem; margin-bottom:20px; }
-.demo-preview { background:#0a0a0a; border-radius:16px; padding:28px; margin:20px 0; text-align:left; min-height:120px; border:1px dashed var(--border); transition:.3s; }
-.demo-preview.active { border-color:var(--accent); }
+.builder { max-width:760px; margin:0 auto; background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px; }
+.builder select { width:100%; padding:16px; background:#0a0a0a; color:#fff; border:1px solid var(--border); border-radius:12px; font-size:1rem; margin-bottom:16px; }
+.demo-box { background:#0a0a0a; border-radius:14px; padding:24px; margin:16px 0; border:1px solid var(--border); min-height:100px; }
+.demo-box strong { color:var(--accent); }
 
-.packages { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:28px; margin-top:40px; }
-.pkg { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; transition:.3s; }
-.pkg:hover { transform:translateY(-8px); }
-.pkg.premium { border-color:var(--accent); }
-.pkg ul { list-style:none; margin-top:24px; }
-.pkg li { padding:10px 0 10px 32px; position:relative; }
-.pkg li:before { content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700; font-size:1.2rem; }
+.compare { overflow-x:auto; margin-top:30px; }
+.compare table { width:100%; border-collapse:collapse; background:var(--card); border-radius:16px; overflow:hidden; }
+.compare th, .compare td { padding:16px 20px; text-align:left; border-bottom:1px solid var(--border); }
+.compare th { background:#0a0a0a; font-weight:600; }
+.compare td:first-child { color:var(--muted); }
 
-.nina-box { max-width:720px; margin:40px auto; background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; }
-.nina-box input { width:100%; padding:18px; background:#0a0a0a; border:1px solid var(--border); border-radius:14px; color:#fff; font-size:1.05rem; margin-bottom:16px; }
-.nina-reply { background:#0a0a0a; padding:24px; border-radius:16px; margin-top:20px; white-space:pre-wrap; border-left:3px solid var(--accent); }
-
-footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; color:var(--muted); }
+footer { border-top:1px solid var(--border); padding:50px 0; text-align:center; color:var(--muted); font-size:.9rem; }
 </style>
 </head>
 <body>
@@ -70,8 +64,8 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
   <div class="container header-inner">
     <div class="logo">NIDZP <span>AI</span></div>
     <nav>
-      <a href="#builder">Builder</a>
-      <a href="#paketi">Paketi</a>
+      <a href="#cene">Cene</a>
+      <a href="#demo">Demo</a>
       <a href="#nina">Nina</a>
       <a href="tel:0637456770">063 745 6770</a>
     </nav>
@@ -80,62 +74,14 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
 
 <section class="hero">
   <div class="container">
-    <p class="eyebrow reveal">Sombor i okolina · Lokalni biznisi</p>
-    <h1 class="reveal reveal-delay-1">Sajt koji radi<br>umesto vas</h1>
-    <p class="lead reveal reveal-delay-2">Izaberi delatnost. Vidi demo za 20 sekundi. Transparentne cene. Nina AI koja odgovara dok ti radiš.</p>
-    <div class="price-row reveal reveal-delay-3">
+    <p class="eyebrow">Sombor i okolina · Lokalni biznisi</p>
+    <h1>Sajt kakav<br>ne postoji</h1>
+    <p class="lead">600 € godišnje — sajt koji ne možeš naći na tržištu za tu cenu.<br>2.500 € godišnje — sajt kakav ne postoji.</p>
+    <div class="price-row">
       <div class="price-card">
         <div class="price">600 € <small>/ god</small></div>
-        <div style="color:var(--muted); margin-top:10px;">Sajt · osnovni</div>
-      </div>
-      <div class="price-card premium">
-        <div class="price">2.500 € <small>/ god</small></div>
-        <div style="color:var(--muted); margin-top:10px;">Premium + Nina AI</div>
-      </div>
-    </div>
-    <a href="#builder" class="btn reveal">Pokreni builder</a>
-    <a href="tel:0637456770" class="btn btn-outline reveal">Pozovi odmah</a>
-  </div>
-</section>
-
-<section id="builder">
-  <div class="container">
-    <h2 class="reveal">Site Builder · odmah</h2>
-    <p class="sub reveal">Izaberi delatnost i paket. Demo se menja uživo. Fiktivan, ali klikabilan.</p>
-    <div class="builder reveal">
-      <select id="delatnost">
-        <option value="restoran">Restoran / picerija</option>
-        <option value="kafic">Kafić</option>
-        <option value="pekara">Pekara</option>
-        <option value="auto">Auto-servis</option>
-        <option value="frizer">Frizerski / beauty salon</option>
-        <option value="stomatolog">Stomatološka ordinacija</option>
-        <option value="vulkanizer">Vulkanizer</option>
-        <option value="fitness">Fitness</option>
-        <option value="hotel">Hotel i apartmani</option>
-      </select>
-      <select id="paket">
-        <option value="1">Paket Sajt · 600 €</option>
-        <option value="2">Premium + Nina · 2.500 €</option>
-      </select>
-      <div class="demo-preview" id="demoBox">
-        <strong>DEMO: Restoran / picerija · Paket Sajt</strong><br>
-        Otvoren. Bez prijave. Bez obaveze.<br>
-        <small style="color:var(--muted);">FIKTIVNI NIDZP DEMO</small>
-      </div>
-      <a id="demoLink" href="https://nidzpmar.vercel.app/demo/restoran/paket-1/" target="_blank" class="btn">Otvori ceo demo</a>
-    </div>
-  </div>
-</section>
-
-<section id="paketi" style="background:#0a0a0a;">
-  <div class="container">
-    <h2 class="reveal">Dva nivoa. Jedna istina.</h2>
-    <p class="sub reveal">600 € je solidan start. 2.500 € je sistem koji radi umesto tebe.</p>
-    <div class="packages">
-      <div class="pkg reveal">
-        <h3>Sajt · 600 €</h3>
-        <p style="color:var(--muted); margin:10px 0 20px;">Da te nađu i pozovu.</p>
+        <h3>Sajt</h3>
+        <p>Nema na tržištu za ovu cenu.</p>
         <ul>
           <li>Google vidljivost</li>
           <li>Mobilni + desktop</li>
@@ -143,31 +89,82 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
           <li>Održavanje u ceni</li>
           <li>Ista cena pri obnovi</li>
         </ul>
+        <a href="tel:0637456770" class="btn" style="margin-top:20px;">Uzmi Sajt</a>
       </div>
-      <div class="pkg premium reveal reveal-delay-1">
-        <h3>Premium + Nina · 2.500 €</h3>
-        <p style="color:var(--muted); margin:10px 0 20px;">AI koji odgovara dok ti radiš.</p>
+      <div class="price-card premium">
+        <div class="badge">NE POSTOJI</div>
+        <div class="price">2.500 € <small>/ god</small></div>
+        <h3>Premium + Nina</h3>
+        <p>Sajt kakav ne postoji. AI radi umesto tebe.</p>
         <ul>
           <li>Sve iz paketa Sajt</li>
           <li>Više stranica po meri</li>
-          <li>Nina AI (personalni asistent)</li>
+          <li>Nina AI asistent</li>
           <li>Ti odobravaš sadržaj</li>
           <li>Testiranje + izmena</li>
           <li>Ista cena pri obnovi</li>
         </ul>
+        <a href="tel:0637456770" class="btn" style="margin-top:20px;">Uzmi Premium</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="nina">
+<section id="demo" style="background:#0a0a0a;">
   <div class="container">
-    <h2 class="reveal">Nina · tvoja AI</h2>
-    <p class="sub reveal">Odgovara iz tvojih podataka. Javno kaže da je AI. Ne izmišlja. Vodi ka pozivu.</p>
-    <div class="nina-box reveal">
-      <input id="ninaInput" placeholder="Pitaj Ninu nešto o svom lokalu..." />
-      <button id="ninaBtn" class="btn">Pitaj Ninu</button>
-      <div id="ninaReply" class="nina-reply" style="display:none;"></div>
+    <h2>Demo za 20 sekundi</h2>
+    <p class="sub">Izaberi delatnost. Vidi kako izgleda. Bez prijave. Bez obaveze.</p>
+    <div class="builder">
+      <select id="delatnost">
+        <option value="restoran">Restoran / picerija</option>
+        <option value="kafic">Kafić</option>
+        <option value="pekara">Pekara</option>
+        <option value="mesara">Mesara</option>
+        <option value="frizer">Frizerski / beauty salon</option>
+        <option value="stomatolog">Stomatološka ordinacija</option>
+        <option value="auto">Auto-servis</option>
+        <option value="vulkanizer">Vulkanizer</option>
+        <option value="fitness">Fitness</option>
+      </select>
+      <select id="paket">
+        <option value="1">Sajt · 600 €</option>
+        <option value="2">Premium + Nina · 2.500 €</option>
+      </select>
+      <div class="demo-box" id="demoBox">
+        <strong>DEMO: Restoran / picerija · Sajt 600 €</strong><br>
+        Otvoren. Bez prijave. Bez obaveze.
+      </div>
+      <a id="demoLink" href="https://nidzpmar.vercel.app/demo/restoran/paket-1/" target="_blank" class="btn">Otvori ceo demo</a>
+    </div>
+  </div>
+</section>
+
+<section id="cene">
+  <div class="container">
+    <h2>Razlika</h2>
+    <p class="sub">600 € je već bolji od svega što nađeš. 2.500 € ne postoji na tržištu.</p>
+    <div class="compare">
+      <table>
+        <tr><th></th><th>Sajt · 600 €</th><th>Premium + Nina · 2.500 €</th></tr>
+        <tr><td>Google vidljivost</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Mobilni + desktop</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Broj stranica</td><td>Osnovne</td><td>Više po meri</td></tr>
+        <tr><td>Nina AI</td><td>—</td><td>✓</td></tr>
+        <tr><td>Odobravanje sadržaja</td><td>—</td><td>✓</td></tr>
+        <tr><td>Testiranje + izmena</td><td>—</td><td>✓</td></tr>
+        <tr><td>Održavanje</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Ista cena pri obnovi</td><td>✓</td><td>✓</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="nina" style="background:#0a0a0a;">
+  <div class="container">
+    <h2>Nina · samo u Premium</h2>
+    <p class="sub">Odgovara iz tvojih podataka. Javno kaže da je AI. Ne izmišlja. Vodi ka pozivu.</p>
+    <div style="text-align:center; margin-top:30px;">
+      <a href="tel:0637456770" class="btn">Pozovi i vidi Ninu</a>
     </div>
   </div>
 </section>
@@ -176,7 +173,7 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
   <div class="container">
     <p><strong>NIDZP AI Marketing</strong> · Sombor i okolina</p>
     <p>063 745 6770 · nidzpaimarketing@gmail.com</p>
-    <p style="margin-top:16px; font-size:.9rem;">Domen i oglasi posebno, po stvarnoj ceni. Bez skrivenih troškova.</p>
+    <p style="margin-top:12px;">Domen i oglasi posebno, po stvarnoj ceni. Bez skrivenih troškova.</p>
   </div>
 </footer>
 
@@ -185,26 +182,14 @@ const del = document.getElementById('delatnost');
 const pak = document.getElementById('paket');
 const box = document.getElementById('demoBox');
 const link = document.getElementById('demoLink');
-const names = { restoran:'Restoran / picerija', kafic:'Kafić', pekara:'Pekara', auto:'Auto-servis', frizer:'Frizerski / beauty salon', stomatolog:'Stomatološka ordinacija', vulkanizer:'Vulkanizer', fitness:'Fitness', hotel:'Hotel i apartmani' };
+const names = { restoran:'Restoran / picerija', kafic:'Kafić', pekara:'Pekara', mesara:'Mesara', frizer:'Frizerski / beauty salon', stomatolog:'Stomatološka ordinacija', auto:'Auto-servis', vulkanizer:'Vulkanizer', fitness:'Fitness' };
 function update() {
   const d = del.value, p = pak.value;
-  box.classList.add('active');
-  box.innerHTML = `<strong>DEMO: ${names[d]} · ${p==='2'?'Premium + Nina':'Paket Sajt'}</strong><br>Otvoren. Bez prijave. Bez obaveze.<br><small style="color:var(--muted);">FIKTIVNI NIDZP DEMO</small>`;
+  const paketName = p === '2' ? 'Premium + Nina · 2.500 €' : 'Sajt · 600 €';
+  box.innerHTML = `<strong>DEMO: ${names[d]} · ${paketName}</strong><br>Otvoren. Bez prijave. Bez obaveze.`;
   link.href = `https://nidzpmar.vercel.app/demo/${d}/paket-${p}/`;
-  setTimeout(() => box.classList.remove('active'), 400);
 }
 del.onchange = pak.onchange = update;
-
-document.getElementById('ninaBtn').onclick = () => {
-  const q = document.getElementById('ninaInput').value.trim();
-  if (!q) return;
-  const r = document.getElementById('ninaReply');
-  r.style.display = 'block';
-  r.textContent = 'Nina razmišlja...';
-  setTimeout(() => {
-    r.textContent = 'Nina (AI): Razumem. Za ' + (names[del.value] || 'tvoj lokal') + ' mogu da ti pokažem kako bi sajt izgledao i da te povežem sa pozivom na 063 745 6770. Šta te konkretno zanima?';
-  }, 700);
-};
 </script>
 </body>
 </html>
