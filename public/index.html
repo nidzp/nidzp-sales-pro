@@ -6,54 +6,54 @@
 <title>NIDZP · Sajt kakav ne postoji</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root { --bg:#050505; --card:#0f0f0f; --text:#fafafa; --muted:#a1a1aa; --accent:#f97316; --border:#1f1f1f; }
+:root { --bg:#050505; --card:#0c0c0c; --text:#fafafa; --muted:#a1a1aa; --accent:#f97316; --border:#1a1a1a; }
 * { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; }
 body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-.container { max-width:1120px; margin:0 auto; padding:0 24px; }
-header { position:sticky; top:0; z-index:100; background:rgba(5,5,5,.9); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
-.header-inner { display:flex; justify-content:space-between; align-items:center; padding:16px 0; }
-.logo { font-weight:800; font-size:1.25rem; letter-spacing:-.03em; }
+.container { max-width:1140px; margin:0 auto; padding:0 24px; }
+header { position:sticky; top:0; z-index:100; background:rgba(5,5,5,.92); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); }
+.header-inner { display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+.logo { font-weight:800; font-size:1.35rem; letter-spacing:-.04em; }
 .logo span { color:var(--accent); }
-nav a { color:var(--muted); text-decoration:none; margin-left:24px; font-weight:500; font-size:.95rem; }
+nav a { color:var(--muted); text-decoration:none; margin-left:28px; font-weight:500; }
 nav a:hover { color:#fff; }
 
-.hero { padding:110px 0 80px; text-align:center; background:radial-gradient(ellipse 70% 50% at 50% -5%, #1a1512, transparent); }
-.eyebrow { color:var(--accent); font-weight:600; letter-spacing:2.5px; font-size:.7rem; text-transform:uppercase; margin-bottom:18px; }
-h1 { font-size:clamp(2.6rem,7vw,4.8rem); font-weight:800; letter-spacing:-.045em; line-height:1.02; margin-bottom:18px; }
-.lead { font-size:1.25rem; color:var(--muted); max-width:640px; margin:0 auto 48px; }
+.hero { padding:120px 0 90px; text-align:center; background:radial-gradient(ellipse 80% 60% at 50% -10%, #1c1510, transparent); }
+.eyebrow { color:var(--accent); font-weight:600; letter-spacing:3px; font-size:.72rem; text-transform:uppercase; margin-bottom:20px; }
+h1 { font-size:clamp(2.8rem,8vw,5.2rem); font-weight:800; letter-spacing:-.05em; line-height:.98; margin-bottom:22px; }
+.lead { font-size:1.3rem; color:var(--muted); max-width:700px; margin:0 auto 56px; }
 
-.price-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; margin-top:20px; }
-.price-card { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; text-align:left; position:relative; transition:.25s; }
-.price-card:hover { transform:translateY(-6px); border-color:#333; }
-.price-card.premium { border-color:var(--accent); box-shadow:0 30px 70px rgba(249,115,22,.08); }
-.badge { position:absolute; top:-14px; right:24px; background:var(--accent); color:#fff; font-size:.65rem; font-weight:700; padding:6px 14px; border-radius:30px; letter-spacing:1.5px; }
-.price { font-size:3rem; font-weight:800; color:var(--accent); letter-spacing:-.03em; }
-.price small { font-size:1.1rem; color:var(--muted); font-weight:500; }
-.price-card h3 { font-size:1.4rem; margin:10px 0 8px; font-weight:700; }
-.price-card .desc { color:var(--muted); margin-bottom:24px; font-size:.98rem; }
+.price-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:28px; }
+.price-card { background:var(--card); border:1px solid var(--border); border-radius:28px; padding:40px; text-align:left; position:relative; transition:.3s ease; }
+.price-card:hover { transform:translateY(-8px); border-color:#333; }
+.price-card.premium { border-color:var(--accent); box-shadow:0 40px 80px rgba(249,115,22,.1); }
+.badge { position:absolute; top:-16px; right:28px; background:var(--accent); color:#fff; font-size:.68rem; font-weight:700; padding:8px 16px; border-radius:40px; letter-spacing:1.5px; }
+.price { font-size:3.2rem; font-weight:800; color:var(--accent); letter-spacing:-.04em; }
+.price small { font-size:1.15rem; color:var(--muted); font-weight:500; }
+.price-card h3 { font-size:1.5rem; margin:12px 0 10px; font-weight:700; }
+.price-card .desc { color:var(--muted); margin-bottom:28px; font-size:1rem; }
 .price-card ul { list-style:none; }
-.price-card li { padding:8px 0 8px 28px; position:relative; font-size:.98rem; }
-.price-card li:before { content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700; font-size:1.1rem; }
-.btn { display:inline-block; background:var(--accent); color:#fff; padding:16px 32px; border-radius:14px; text-decoration:none; font-weight:600; transition:.2s; margin-top:24px; }
-.btn:hover { background:#ea580c; transform:translateY(-1px); }
+.price-card li { padding:9px 0 9px 30px; position:relative; font-size:1rem; }
+.price-card li:before { content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700; font-size:1.15rem; }
+.btn { display:inline-block; background:var(--accent); color:#fff; padding:18px 36px; border-radius:16px; text-decoration:none; font-weight:600; transition:.2s; margin-top:28px; font-size:1.05rem; }
+.btn:hover { background:#ea580c; transform:translateY(-2px); }
 
-section { padding:90px 0; }
-h2 { font-size:2.3rem; font-weight:700; text-align:center; margin-bottom:10px; letter-spacing:-.02em; }
-.sub { text-align:center; color:var(--muted); margin-bottom:48px; font-size:1.05rem; }
+section { padding:100px 0; }
+h2 { font-size:2.5rem; font-weight:700; text-align:center; margin-bottom:12px; letter-spacing:-.03em; }
+.sub { text-align:center; color:var(--muted); margin-bottom:56px; font-size:1.1rem; }
 
-.builder { max-width:720px; margin:0 auto; background:var(--card); border:1px solid var(--border); border-radius:24px; padding:36px; }
-.builder select { width:100%; padding:18px; background:#0a0a0a; color:#fff; border:1px solid var(--border); border-radius:14px; font-size:1.05rem; margin-bottom:18px; }
-.demo-box { background:#0a0a0a; border-radius:16px; padding:28px; margin:18px 0; border:1px solid var(--border); }
+.builder { max-width:760px; margin:0 auto; background:var(--card); border:1px solid var(--border); border-radius:28px; padding:40px; }
+.builder select { width:100%; padding:20px; background:#0a0a0a; color:#fff; border:1px solid var(--border); border-radius:16px; font-size:1.08rem; margin-bottom:20px; }
+.demo-box { background:#0a0a0a; border-radius:18px; padding:32px; margin:20px 0; border:1px solid var(--border); }
 .demo-box strong { color:var(--accent); }
 
 .compare { overflow-x:auto; }
-.compare table { width:100%; border-collapse:collapse; background:var(--card); border-radius:20px; overflow:hidden; }
-.compare th, .compare td { padding:18px 22px; text-align:left; border-bottom:1px solid var(--border); }
+.compare table { width:100%; border-collapse:collapse; background:var(--card); border-radius:24px; overflow:hidden; }
+.compare th, .compare td { padding:20px 24px; text-align:left; border-bottom:1px solid var(--border); }
 .compare th { background:#0a0a0a; font-weight:600; }
-.compare td:first-child { color:var(--muted); width:40%; }
+.compare td:first-child { color:var(--muted); width:42%; }
 
-footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; color:var(--muted); }
+footer { border-top:1px solid var(--border); padding:70px 0; text-align:center; color:var(--muted); }
 </style>
 </head>
 <body>
@@ -70,7 +70,7 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
 
 <section class="hero">
   <div class="container">
-    <p class="eyebrow">Sombor i okolina</p>
+    <p class="eyebrow">Sombor i okolina · Lokalni biznisi</p>
     <h1>Sajt kakav<br>ne postoji</h1>
     <p class="lead">600 € godišnje — sajt koji ne možeš naći na tržištu za tu cenu.<br>2.500 € godišnje — sajt kakav ne postoji.</p>
     <div class="price-row">
@@ -106,7 +106,7 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
   </div>
 </section>
 
-<section id="demo" style="background:#0a0a0a;">
+<section id="demo" style="background:#080808;">
   <div class="container">
     <h2>Demo za 20 sekundi</h2>
     <p class="sub">Izaberi delatnost i paket. Otvori pravi demo.</p>
@@ -159,7 +159,7 @@ footer { border-top:1px solid var(--border); padding:60px 0; text-align:center; 
   <div class="container">
     <p><strong>NIDZP AI Marketing</strong> · Sombor i okolina</p>
     <p>063 745 6770 · nidzpaimarketing@gmail.com</p>
-    <p style="margin-top:14px; font-size:.9rem;">Domen i oglasi posebno, po stvarnoj ceni.</p>
+    <p style="margin-top:16px; font-size:.92rem;">Domen i oglasi posebno, po stvarnoj ceni.</p>
   </div>
 </footer>
 
